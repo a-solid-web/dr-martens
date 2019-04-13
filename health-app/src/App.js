@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import BrowserRouter from 'react-router-dom';
+import Navigation from './components/Navigation';
 
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Navigation login={this.login.bind(this)} webId={this.state.webId} />
+          <Navigation />
             <Route path="/" render={() => <ContactsPage />} exact />
         </div>
       </BrowserRouter>
