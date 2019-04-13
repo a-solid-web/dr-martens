@@ -1,11 +1,13 @@
 import React from "react"; 
+import HeroSection from '../HeroSection/HeroSection';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from 'react-bootstrap/Container';
 
 
 const Start = () => {
     return (
-        <div>
-            <h1>hi</h1>
-        </div>
+        <HeroSection/> 
     )
 }
 
