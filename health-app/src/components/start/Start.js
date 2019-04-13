@@ -53,8 +53,7 @@ class Start extends Component {
         
         <> a solid:Notification , as:Announce, PREQ:DataRequest;
           PREQ:requestDataType PREQ:HealthData;
-          PREQ:requests <
-          ` + this.state.webId.replace("profile/card#me", "health/") + `>;
+          PREQ:requests <` + this.state.webId.replace("profile/card#me", "health/") + `>;
           PREQ:requestFrom <https://malte18.solid.community/profile/card#me>.
         `; //Needs to be updated with domain of hosted dr marten page
 
