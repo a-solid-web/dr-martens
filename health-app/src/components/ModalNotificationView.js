@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import PermissionCard from "./PermissionCard";
 
 class ModalNotificationView extends React.Component {
   render() {
@@ -17,9 +16,7 @@ class ModalNotificationView extends React.Component {
             Requested Permissions
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <PermissionCard hello="hi" />
-        </Modal.Body>
+        <Modal.Body>hi</Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.onHide}>Close</Button>
         </Modal.Footer>
