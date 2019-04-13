@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import BrowserRouter from 'react-router-dom';
 import Navigation from './components/Navigation';
+import MainPage from './components/MainPage/MainPage';
 
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navigation />
-            <Route path="/" render={() => <ContactsPage />} exact />
+          <Route path="/" render={() => <HeroSection />} exact />
         </div>
       </BrowserRouter>
     );
