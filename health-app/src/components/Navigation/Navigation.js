@@ -11,13 +11,18 @@ const Navigation = () => {
         <Navbar bg="light" variant="light" fixed="top">
           <Navbar.Brand>
             <img src="favicon.ico" width="30" height="30" alt="Solid logo" />
-            <span style={{ marginLeft: "5%" }}>Solid Web</span>
+            <span style={{ marginLeft: "5%" }}>Dr Martens</span>
           </Navbar.Brand>
           <Nav className="mr-auto">
             <NavLink 
               to="/" 
-              style={{ color: "#000", marginLeft: "10%" }}>
+              style={{ color: "#000", marginLeft: "25%" }}>
               Healthcase
+            </NavLink>
+            <NavLink 
+              to="/getuser" 
+              style={{ color: "#000", marginLeft: "25%" }}>
+              Usercheck
             </NavLink>
           </Nav>
         </Navbar>
