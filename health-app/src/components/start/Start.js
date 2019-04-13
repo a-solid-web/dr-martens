@@ -53,9 +53,10 @@ class Start extends Component {
         
         <> a solid:Notification , as:Announce, PREQ:DataRequest;
           PREQ:requestDataType PREQ:HealthData;
-          PREQ:requests <https://ludwigschubert.solid.community/private/health>;
+          PREQ:requests <
+          ` + this.state.webId.replace("profile/card#me", "private/health/") + `>;
           PREQ:requestFrom <https://malte18.solid.community/profile/card#me>.
-        `;
+        `; //Needs to be updated with domain of hosted dr marten page
 
     //When deleting use DELETE instead of INSERT
     const options = {
