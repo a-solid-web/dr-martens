@@ -3,9 +3,9 @@ import './App.css';
 import { BrowserRouter, Route , Switch} from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Start from './components/start/Start';
+import GetUser from './components/GetUser/GetUser';
 
-
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
      <BrowserRouter>
@@ -13,6 +13,7 @@ class App extends Component {
         <Navigation />
         <Switch>
           <Route path="/" render={() => <Start /> } exact />
+          <Route path="/getuser" render= {() => <GetUser /> } exact /> 
         </Switch>
       </div>
     </BrowserRouter>  
