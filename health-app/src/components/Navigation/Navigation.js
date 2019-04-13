@@ -4,8 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import { NavLink } from "react-router-dom";
 import { Button } from "yoda-design-system";
 
-const Navigation = () => {
-  
+const Navigation = (props) => {
     return (
       <div style={{ padding: "3%" }}>
         <Navbar bg="light" variant="light" fixed="top">
@@ -25,6 +24,7 @@ const Navigation = () => {
               Usercheck
             </NavLink>
           </Nav>
+          <Button onClick={props.login}>Login</Button>
         </Navbar>
       </div>
     );
