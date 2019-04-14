@@ -44,7 +44,8 @@ class Start extends Component {
     const store = rdf.graph();
     const fetcher = new rdf.Fetcher(store);
 
-    let createTurtle = `
+    let createTurtle =
+      `
         @prefix : <#>.
         @prefix inbox: <./>.
         @prefix solid: <http://www.w3.org/ns/solid/terms#>.
@@ -53,8 +54,18 @@ class Start extends Component {
         
         <> a solid:Notification , as:Announce, PREQ:DataRequest;
           PREQ:requestDataType PREQ:HealthData;
-          PREQ:requests <` + this.state.webId.replace("profile/card#me", "health/") + `>;
-          PREQ:requestFrom <https://malte18.solid.community/profile/card#me>.
+          PREQ:hasIntent PREQ:DataAnalysis;
+          PREQ:wasSentOn "` + (new Date().toDateString()) + `";
+          PREQ:expires "` + (new Date("July 15, 2019").toDateString())  + `";
+          PREQ:privacyRisklevel "high"@en;
+          PREQ:financialRisklevel "high"@en;
+          PREQ:legalRisklevel "medium"@en;
+          PREQ:requests <` +
+      this.state.webId.replace("profile/card#me", "health/") +
+      `>;
+          PREQ:requestFrom <` +
+      window.location.href +
+      `>.
         `; //Needs to be updated with domain of hosted dr marten page
 
     //When deleting use DELETE instead of INSERT
